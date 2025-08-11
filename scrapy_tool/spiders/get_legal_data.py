@@ -31,7 +31,10 @@ class LegalDataSpider(scrapy.Spider):
             raise ValueError("Incorrect data format (should be DD-MM-YYYY) or start_date is after end_date")
 
         self.base_urls = [
-            f"https://www.workplacerelations.ie/en/search/?decisions=1&body=2&from={self.start_date}&to={self.end_date}"
+            f"https://www.workplacerelations.ie/en/search/?decisions=1&body=1&from={self.start_date}&to={self.end_date}",
+            f"https://www.workplacerelations.ie/en/search/?decisions=1&body=2&from={self.start_date}&to={self.end_date}",
+            f"https://www.workplacerelations.ie/en/search/?decisions=1&body=3&from={self.start_date}&to={self.end_date}",
+            f"https://www.workplacerelations.ie/en/search/?decisions=1&body=15376&from={self.start_date}&to={self.end_date}"
         ]
 
         self.s3 = boto3.client(
