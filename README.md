@@ -39,3 +39,5 @@ The legal documents are stored in the object storage in the specified bucket in 
 
 ## Future Improvements
 - Apply orchestration using Dagster to automatically trigger the scraper on a monthly basis to extract new data each month.
+    
+    - Recently set up local dagster orchesration framework (untested yet).
